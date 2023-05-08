@@ -40,5 +40,5 @@
 - 激活环境`conda activate visgpt`
 - 安装依赖`pip install -r requirements.txt`
 - 这里有两个指令分别针对Linux和Windows的，这里的Your_Private_Openai_Key要替换成自己的:
-- -windows运行`set OPENAI_API_KEY={Your_Private_Openai_Key}`
-- -Linux运行`export OPENAI_API_KEY={Your_Private_Openai_Key}`
+  - windows运行`set OPENAI_API_KEY={Your_Private_Openai_Key}`
+  - Linux运行`export OPENAI_API_KEY={Your_Private_Openai_Key}`
