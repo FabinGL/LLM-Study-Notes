@@ -43,7 +43,7 @@
   - windows运行`set OPENAI_API_KEY={Your_Private_Openai_Key}`
   - Linux运行`export OPENAI_API_KEY={Your_Private_Openai_Key}`
 - 接着就可以在命令行打开`python visual_chatgpt.py --load "ImageCaptioning_cuda:0,Text2Image_cuda:0"`
-这里的模型(ImageCaptioning,Text2Image)是可以组合着来的，也可以指定部署在不同的显卡上(Cuda:n)，其中ChatGPT是利用云端计算返回的结果，所以不占用电脑算力，但是生成图像的过程是在本地电脑上生成的。所以电脑还是需要提供生成图像所要的算力。
+这里的模型(Imagecaptioning,Text2Image)是可以组合着来的，也可以指定部署在不同的显卡上(Cuda:n)，其中ChatGPT是利用云端计算返回的结果，所以不占用电脑算力，但是生成图像的过程是在本地电脑上生成的。所以电脑还是需要提供生成图像所要的算力。在我的电脑上启动上述两个模型大概使用了7.5G的显存。**需要注意的是ImageCaptioning这个模块是一定要加载的，不然会报错**，要生成图像首先要了解图像嘛。
 
 具体算力要求如下:
 | Foundation Model        | GPU Memory (MB) |
@@ -69,4 +69,6 @@
 | Image2Normal           | 0               |
 | NormalText2Image       | 3529            |
 | VisualQuestionAnswering| 1495            |
+
+所以要运行所有的模型大概需要40G的显存，我玩不起，希望以后可以玩一下吧TAT。
 
