@@ -116,4 +116,13 @@ ChatGLM-6b各个版本的显存要求如下所示：
 ```OutOfMemoryError: CUDA out of memory```
 
 ChatGLM的布置流程如下：
-
+- 同样下载GIT，上文已经提到，这里不再过多赘述。
+- `git clone https://huggingface.co/THUDM/chatglm-6b`
+- 从Hugging face上下载模型，下载之后放在本地文件夹。
+   - [ChatGLM-FP16](https://huggingface.co/THUDM/chatglm-6b)
+   - [ChatGLM-INT8](https://huggingface.co/THUDM/chatglm-6b-int8)
+   - [CHATGLM-INT4](https://huggingface.co/THUDM/chatglm-6b-int4)
+- `cd ChatGLM-6B`
+- 将文件中的`web_demo.py`文件和`cli_dem.py`文件中的模型参数改成本地模型
+- `conda activate {your_env_name}`启动虚拟环境
+- `python web_demo.py` or `python cli_demo.py`
