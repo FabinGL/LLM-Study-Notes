@@ -1,6 +1,9 @@
 # LLM Study-Notes⏰
+<p align="center">
+   🌐 <a href="https://github.com/FabinGL" target="_blank">Github/a> • ⏬ <a href="https://fabingl.github.io/" target="_blank">Download Model</a> •🪧 <br>
+</p>
 
-在这个笔记中我会分享一些我个人学习Chatgpt以及LLM大语言模型的过程经历，同时也会记录一些代码上的坑。实际上最近不止玩了LLM还玩了图像的模型，但是现在这个已经很成熟了，所以等以后有空研究研究再写吧。
+在这个笔记中我会分享一些我个人学习ChatGPT以及LLM大语言模型的过程经历，同时也会记录一些代码上的坑。实际上最近不止玩了LLM还玩了图像的模型，但是现在这个已经很成熟了，所以等以后有空研究研究再写吧。
 本人以下操作基于以下电脑配置完成💻。
 - CPU:5900X
 - GPU:3080Ti O12G
