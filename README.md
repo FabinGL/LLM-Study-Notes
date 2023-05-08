@@ -113,7 +113,7 @@ ChatGLM-6b各个版本的显存要求如下所示：
 | INT4           | 6 GB                      | 7 GB                              |
 
 我的电脑目前是安装了INT8与INT4两个版本,FP16最低要求13G显存，所以我玩不了，运行的话就会有如下报错：
-'''OutOfMemoryError: CUDA out of memory'''
+```OutOfMemoryError: CUDA out of memory```
 
 ChatGLM的布置流程如下：
 
