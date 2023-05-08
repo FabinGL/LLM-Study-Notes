@@ -83,4 +83,13 @@ Visual ChatGPT配置的话就是分为以下几步:
 目前关于ChatGPT我大概做到的就是这些，后面会继续研究补充一些东西。ps：最近沙特的MiniChatGPT4非常的火，但是我的师兄说效果不行我没有配置，还有一个AutoGPT，那个也是个神一般的模型在我看来，你给一个任务，然后他会有两个GPT打架来互相纠错帮你完成这个任务，这真的很神奇，颇有一种找人给你打工的感觉，但是听说要收费，而且我也看到一些博客里面写到AutoGPT难以收敛（找不到最终的解决办法），我本人电脑算力也不足所以还没尝试，这里记录一下等以后AutoGPT版本稳定了可以做尝试。
 
 ## ChatGLM
-自从ChatGLM出来以后
+自从ChatGLM出来以后，清华和智谱AI联手搞了一个模型叫做ChatGLM,ChatGLM目前又有两个版本，一个是[ChatGLM-6b](https://github.com/THUDM/ChatGLM-6B)，一个是[ChatGLM-130b](https://github.com/THUDM/GLM-130B)。ChatGLM-130b不是普通人家能玩起的。显存要求极高。
+| **Hardware**    | **GPU Memory** | **Quantization** | **Weight Offload** |
+| --------------- | -------------- | ---------------- | ------------------ |
+| 8 * A100        | 40 GB          | No               | No                 |
+| 8 * V100        | 32 GB          | No               | Yes (BMInf)        |
+| 8 * V100        | 32 GB          | INT8             | No                 |
+| 8 * RTX 3090    | 24 GB          | INT8             | No                 |
+| 4 * RTX 3090    | 24 GB          | INT4             | No                 |
+| 8 * RTX 2080 Ti | 11 GB          | INT4             | No        |
+你看看人家这拿来训练的显卡。我暂时就玩不起了，ChatGLM-130b一共有130亿参数，ChatGLM-6b面向普通群众的，参数量是62亿。也可以进行微调，这个后面会详细讲。我目前主要的探索都是基于ChatGLM-6b的模型的。
