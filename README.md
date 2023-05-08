@@ -91,5 +91,6 @@ Visual ChatGPT配置的话就是分为以下几步:
 | 8 * V100        | 32 GB          | INT8             | No                 |
 | 8 * RTX 3090    | 24 GB          | INT8             | No                 |
 | 4 * RTX 3090    | 24 GB          | INT4             | No                 |
-| 8 * RTX 2080 Ti | 11 GB          | INT4             | No        |
+| 8 * RTX 2080 Ti | 11 GB          | INT4             | No                 |
+
 你看看人家这拿来训练的显卡。我暂时就玩不起了，ChatGLM-130b一共有130亿参数，ChatGLM-6b面向普通群众的，参数量是62亿。也可以进行微调，这个后面会详细讲。我目前主要的探索都是基于ChatGLM-6b的模型的。
