@@ -27,3 +27,7 @@
 
 ![GPT指定面具](image/SyChatMj.png "给GPT戴面具")
 在和ChatGPT聊天之前可以先指定他的运用场景，他可以充当小红书写手，练习雅思的工具等等。非常好用。
+
+### Visual ChatGPT
+这个更是个重量级产品，实际上就是GPT4了，在图像领域真的和造神一样。你可以叫他分割图像，也可以叫他生成图，叫他理解图片，不过这个非常吃显存。点这里可以转跳到他的[Guithub项目](https://github.com/microsoft/TaskMatrix)。
+![Visual Chat](image/)
