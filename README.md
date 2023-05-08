@@ -14,7 +14,7 @@
 目前我使用的大语言模型分别有以下两种，分别是GPT3.5与国内清华与智谱华章所发行的ChatGLM模型，接下来我会对这两个模型进行系统性的说明与比较。
 
 ## GPT3.5
-目前对于GPT3.5所配置的API已经可以玩出很多花来了。一般在直接在OPENAI的网站上使用是免费的。如果你要使用接下来的模型就要去OPENAI拿账户的API，我是同学帮我拿的，由于我经常被OPENAI墙😥。
+目前对于GPT3.5所配置的API已经可以玩出很多花来了。一般在直接在OPENAI的网站上使用是免费的。如果你要使用接下来的模型就要去OPENAI拿账户的API，我是同学帮我拿的，由于我经常被OPENAI墙😥。**使用OPENAI的API的，LLM模型都是在云端计算的，不需要自身电脑的算力。**
 
 ### GPT3.5的配置
 这个没有什么困难的，只需要照着OPENAI官网的来就好了，一般就是给个KEY然后GIT一下仓库，jupyter notebook里就可以直接调用了。但是主要就是要钱。效果就可以不用多说了，目前最强的。基本问题他都能解决，这个一般人也都够用了。
@@ -42,3 +42,31 @@
 - 这里有两个指令分别针对Linux和Windows的，这里的Your_Private_Openai_Key要替换成自己的:
   - windows运行`set OPENAI_API_KEY={Your_Private_Openai_Key}`
   - Linux运行`export OPENAI_API_KEY={Your_Private_Openai_Key}`
+- 接着就可以在命令行打开`python visual_chatgpt.py --load "ImageCaptioning_cuda:0,Text2Image_cuda:0"`
+这里的模型(ImageCaptioning,Text2Image)是可以组合着来的，也可以指定部署在不同的显卡上(Cuda:n)，其中ChatGPT是利用云端计算返回的结果，所以不占用电脑算力，但是生成图像的过程是在本地电脑上生成的。所以电脑还是需要提供生成图像所要的算力。
+
+具体算力要求如下:
+| Foundation Model        | GPU Memory (MB) |
+|------------------------|-----------------|
+| ImageEditing           | 3981            |
+| InstructPix2Pix        | 2827            |
+| Text2Image             | 3385            |
+| ImageCaptioning        | 1209            |
+| Image2Canny            | 0               |
+| CannyText2Image        | 3531            |
+| Image2Line             | 0               |
+| LineText2Image         | 3529            |
+| Image2Hed              | 0               |
+| HedText2Image          | 3529            |
+| Image2Scribble         | 0               |
+| ScribbleText2Image     | 3531            |
+| Image2Pose             | 0               |
+| PoseText2Image         | 3529            |
+| Image2Seg              | 919             |
+| SegText2Image          | 3529            |
+| Image2Depth            | 0               |
+| DepthText2Image        | 3531            |
+| Image2Normal           | 0               |
+| NormalText2Image       | 3529            |
+| VisualQuestionAnswering| 1495            |
+
