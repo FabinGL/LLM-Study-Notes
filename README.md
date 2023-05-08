@@ -32,7 +32,9 @@
 这个更是个重量级产品，实际上就是GPT4了，在图像领域真的和造神一样。你可以叫他分割图像，也可以叫他生成图，叫他理解图片，不过这个非常吃显存。点这里可以转跳到他的[Guithub项目](https://github.com/microsoft/TaskMatrix)。
 ![Visual Chat](image/demo_short.gif)
 
-可以看到它可以根据你的要求生成图片，提取出线稿等等，最近Diffusion又出来一个模型叫做ControlNet,具体配置可以看[B站的教程](https://www.bilibili.com/video/BV1fa4y1G71W/?spm_id_from=333.999.0.0&vd_source=628628960a416b6de42d5c7fdc17a7fc)。Visual ChatGPT在图像方面实现的功能很大程度和ControlNet重叠，不过他也可以实现图生文的功能。配置的话就是分为以下几步:
+可以看到它可以根据你的要求生成图片，提取出线稿等等，最近Diffusion又出来一个模型叫做ControlNet,具体配置可以看[B站的教程](https://www.bilibili.com/video/BV1fa4y1G71W/?spm_id_from=333.999.0.0&vd_source=628628960a416b6de42d5c7fdc17a7fc)。Visual ChatGPT在图像方面实现的功能很大程度和ControlNet重叠，不过Visual ChatGPT可以实现图生文的功能。还是那句话：术业有专攻嘛，大家想要真的生成好的图像还是去试试已经完善的扩散生成模型。
+
+Visual ChatGPT配置的话就是分为以下几步:
 - Windows电脑需要先下载Git工具，Linux电脑则不用了
 - 在你想要安装的地址运行win+R输入CMD打开命令行
 - 运行`git clone https://github.com/microsoft/visual-chatgpt.git`
@@ -72,4 +74,4 @@
 
 所以要运行所有的模型大概需要40G的显存，我玩不起，希望以后可以玩一下吧TAT。
 
-![Visual Chatgpt的流程图](image)
+![Visual Chatgpt的流程图](image/Yl-visualchat.jpg)
