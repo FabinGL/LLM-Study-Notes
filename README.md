@@ -1,6 +1,6 @@
 # LLM Study-Notes⏰
 
-在这个笔记中我会分享一些我个人学习Chatgpt以及LLM大语言模型的过程经历，同时也会记录一些代码上的坑。
+在这个笔记中我会分享一些我个人学习Chatgpt以及LLM大语言模型的过程经历，同时也会记录一些代码上的坑。实际上最近不止玩了LLM还玩了图像的模型，但是现在这个已经很成熟了，所以等以后有空研究研究再写吧。
 本人以下操作基于以下电脑配置完成💻。
 - CPU:5900X
 - GPU:3080Ti O12G
@@ -31,4 +31,4 @@
 ### Visual ChatGPT
 这个更是个重量级产品，实际上就是GPT4了，在图像领域真的和造神一样。你可以叫他分割图像，也可以叫他生成图，叫他理解图片，不过这个非常吃显存。点这里可以转跳到他的[Guithub项目](https://github.com/microsoft/TaskMatrix)。
 ![Visual Chat](image/demo_short.gif)
-可以看到它可以根据你的要求生成图片，提取出线稿等等，最近Diffusion又出来一个模型叫做[ControlNet],具体配置可以看[B站的教程](https://www.bilibili.com/video/BV1fa4y1G71W/?spm_id_from=333.999.0.0&vd_source=628628960a416b6de42d5c7fdc17a7fc)。Visual ChatGPT在图像方面实现的功能很大程度和ControlNet重叠，不过他也可以实现图生文的功能。
+可以看到它可以根据你的要求生成图片，提取出线稿等等，最近Diffusion又出来一个模型叫做ControlNet,具体配置可以看[B站的教程](https://www.bilibili.com/video/BV1fa4y1G71W/?spm_id_from=333.999.0.0&vd_source=628628960a416b6de42d5c7fdc17a7fc)。Visual ChatGPT在图像方面实现的功能很大程度和ControlNet重叠，不过他也可以实现图生文的功能。
