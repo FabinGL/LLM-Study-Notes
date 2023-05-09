@@ -270,6 +270,6 @@ ps：我在某个群里看到别人拿他来练车辆工程的专业知识，专
    - 女巫~~（你不说我以为詹老师哪里截来的电影剧照）~~
    ![Lora3](image/Lora4.png)
 - ControlNet涂色，他能实现很多内容，我这里只展示其中一种。实际上左边的线稿图也是扩散生成模型生成的。
-！[Lora4](image/Lora3.jpg)
+![Lora4](image/Lora3.jpg)
 
 Author:林发冰 | Wechat:13205034032 | Date:2023.05.09
