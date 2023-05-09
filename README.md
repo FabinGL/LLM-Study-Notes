@@ -167,6 +167,8 @@ MOSS的配置显存要求：
 
 没什么好评价的，玩不起玩不起QAQ。
 
+### ChatGLM的微调
+
 接着说回来ChatGLM的微调，这个玩意比较有趣，也是目前很多人想要攻克的难题，据我所知现在很多人在做这个（北京的微调师的时薪是17刀!!），GLM强就强在入门级显卡可以实现微调，这是非常牛逼的，目前微调方法主要有三种：
 - LoRA
 - P-Tuning V2
@@ -202,4 +204,10 @@ MOSS的配置显存要求：
 - [数据集制作](https://github.com/huang1332/finetune_dataset_maker)
 - [模型微调](https://github.com/mymusise/ChatGLM-Tuning)
 我暂时也使用了这个，只是用他的模型我的显存会报错不足，然后我把它调到我的本地模型上（微调这个地方要改的东西比较多），就会出现一些不知名的报错。
-比如`Only Tensors of floating point and complex dtype can require gradients`，这个的解决方法就是ChatGLM最初始版本未作任何修改的替换到这里的代码就可以解决，然后我这里又遇到了一个`self and mat2 must have the same dtype`，这个BUG非常的神奇，我在Google上找了两天也没找到解决方法，后来我发现很多人也在官方的帖子下询问这个问题，看来这个BUG官方也不好轻易解决。加上我最近比较忙，所以这个微调我还没完成，等后面有空再去Debug或者还是等詹老师买的4090到了我尝试FP16版本吧。
+比如`Only Tensors of floating point and complex dtype can require gradients`，这个的解决方法就是ChatGLM最初始版本未作任何修改的替换到这里的代码就可以解决，然后我这里又遇到了一个`self and mat2 must have the same dtype`，这个BUG非常的神奇，我在Google上找了两天也没找到解决方法，后来我发现很多人也在官方的帖子下询问这个问题，看来这个BUG官方也不好轻易解决。加上我最近比较忙，所以这个微调我还没完成，等后面有空再去Debug或者还是等詹老师买的4090到了我尝试FP16版本吧。因为我看Google目前出问题的都是INT8和INT4量化版本（都是穷人TAT），所以FP16版本应该不会有啥大问题，而且FP16版本实际上在我电脑上运行起来了（Debug时候尝试的），只是显存不足报错了。
+
+不过话说回来这个微调我混到了作者群里学习，我发现还是有很多问题，我总结了一下，大概以下几点：
+- Over fitting，这里的过拟合和我们之前理解的不一样，他过于拟合问题的话就会照着你给的问题原模原样回答，不会去理解你问题和回答的意思。
+- 训练遗忘，记得专业知识然后不记得怎么说话了，你问他数学很猛，但是问他你是谁他就不知道了
+- 重复输出，回答问题会重复回答，比如说问他你是谁，他会说他是清华的聊天机器人ChatGLM-6bbbbbbbbbbbbbbbb.....
+
