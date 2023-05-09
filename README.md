@@ -147,4 +147,11 @@ ChatGLM的布置流程如下：
 - `python web_demo.py` or `python cli_demo.py`
 
 ChatGLM-6b INT8版本和INT4版本的效果差别感觉不是很大，我感觉INT8版本会更带有人类的感情一些。
-![int8](image/int8.png)![int4](image/int4.png)
+
+这是INT8量化的ChatGLM-6b：
+
+![int8](image/int8.png)
+
+这是INT4量化的ChatGLM-6b：
+
+![int4](image/int4.png)
