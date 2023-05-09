@@ -176,6 +176,7 @@ MOSS的配置显存要求：
 
 微调的具体配置要求:
 
+| Fine-tune method | Batch size | Mode |  GRAM  | Speed |
 | ---------------- | ---------- | ---- | ------ | ----- |
 | LoRA (r=8)       |     16     | FP16 |  28GB  | 8ex/s |
 | LoRA (r=8)       |     8      | FP16 |  24GB  | 8ex/s |
