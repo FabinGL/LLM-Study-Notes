@@ -142,6 +142,6 @@ ChatGLM的布置流程如下：
    - [ChatGLM-INT8](https://huggingface.co/THUDM/chatglm-6b-int8)
    - [CHATGLM-INT4](https://huggingface.co/THUDM/chatglm-6b-int4)
 - `cd ChatGLM-6B`
-- 将文件中的`web_demo.py`文件和`cli_dem.py`文件中的模型参数改成本地模型
+- 将文件中的`web_demo.py`文件和`cli_dem.py`文件中的模型参数改成本地模型，假设说上一步中的模型我下载在`D:\ChatGLM-INT8`,那么这里就是将模型中的`THUDM/ChatGLM-6B`替换为`D:\ChatGLM_INT8`。
 - `conda activate {your_env_name}`启动虚拟环境
 - `python web_demo.py` or `python cli_demo.py`
