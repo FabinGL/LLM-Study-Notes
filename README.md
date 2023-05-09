@@ -167,4 +167,37 @@ MOSS的配置显存要求：
 
 没什么好评价的，玩不起玩不起QAQ。
 
+接着说回来ChatGLM的微调，这个玩意比较有趣，也是目前很多人想要攻克的难题，据我所知现在很多人在做这个（北京的微调师的时薪是17刀!!），GLM强就强在入门级显卡可以实现微调，这是非常牛逼的，目前微调方法主要有三种：
+- LoRA
+- P-Tuning V2
+- Freeze
+有一个github大佬实现了三种方法集成的低秩微调方法，按照他的方法可以进行微调。[链接点这里](https://github.com/hiyouga/ChatGLM-Efficient-Tuning)。
+但是这个微调对电脑要求很高，就算量化模型也要训练很久，据我所知官方50W的数据要用4090(24G显存)训练60小时（所以一般玩这个都是租服务器去玩，A100-80G版本一般租起来差不多是9块钱一个小时），我的显卡这两天已经跟我奔波了好久， 不想再折腾他了，所以这个方法还没去尝试，等詹老师把新的显卡搞来我再测试吧TAT。
 
+微调的具体配置要求:
+| ---------------- | ---------- | ---- | ------ | ----- |
+| LoRA (r=8)       |     16     | FP16 |  28GB  | 8ex/s |
+| LoRA (r=8)       |     8      | FP16 |  24GB  | 8ex/s |
+| LoRA (r=8)       |     4      | FP16 |  20GB  | 8ex/s |
+| LoRA (r=8)       |     4      | INT8 |  10GB  | 8ex/s |
+| P-Tuning (p=16)  |     4      | FP16 |  20GB  | 8ex/s |
+| P-Tuning (p=16)  |     4      | INT8 |  16GB  | 8ex/s |
+| P-Tuning (p=16)  |     4      | INT4 |  12GB  | 8ex/s |
+| Freeze (l=3)     |     4      | FP16 |  24GB  | 8ex/s |
+| Freeze (l=3)     |     4      | INT8 |  12GB  | 8ex/s |
+
+| RM  method       | Batch size | Mode |  GRAM  | Speed |
+| ---------------- | ---------- | ---- | ------ | ----- |
+| LoRA (r=8) + rm  |     4      | FP16 |  22GB  | -     |
+| LoRA (r=8) + rm  |     1      | INT8 |  11GB  | -     |
+
+| RLHF method      | Batch size | Mode |  GRAM  | Speed |
+| ---------------- | ---------- | ---- | ------ | ----- |
+| LoRA (r=8) + ppo |     4      | FP16 |  23GB  | -     |
+| LoRA (r=8) + ppo |     1      | INT8 |  12GB  | -     |
+
+目前还有一个模型的微调，那个算是一站式的整合包，是B站一个UP主整合的，[链接在这](https://www.bilibili.com/video/BV1P24y1L7Ge/?spm_id_from=333.337.search-card.all.click)。这个整合包是由数据集制作与模型调整两部分组成，**目前仅实现了LoRA的微调方法**，如果想分别查看实现方法可以查看下面的链接:
+- [数据集制作](https://github.com/huang1332/finetune_dataset_maker)
+- [模型微调](https://github.com/mymusise/ChatGLM-Tuning)
+我暂时也使用了这个，只是用他的模型我的显存会报错不足，然后我把它调到我的本地模型上（微调这个地方要改的东西比较多），就会出现一些不知名的报错。
+比如`Only Tensors of floating point and complex dtype can require gradients`，这个的解决方法就是ChatGLM最初始版本未作任何修改的替换到这里的代码就可以解决，然后我这里又遇到了一个`self and mat2 must have the same dtype`，这个BUG非常的神奇，我在Google上找了两天也没找到解决方法，后来我发现很多人也在官方的帖子下询问这个问题，看来这个BUG官方也不好轻易解决。加上我最近比较忙，所以这个微调我还没完成，等后面有空再去Debug或者还是等詹老师买的4090到了我尝试FP16版本吧。
