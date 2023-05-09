@@ -86,8 +86,21 @@ Visual ChatGPT配置的话就是分为以下几步:
 **输入->ChatGLM+Tagger耦合->输入扩散生成模型->生成图像->输出**这种结构，我觉得可以实现。（不过我也是个小菜鸡，这只是我的一个拙见）。
 
 下面就是一些我运行的结果图，我测试了他文生图和看图说话的能力。
-- 让Visual ChatGPT给我画一只猫。
-![gpt画猫](image/Xgvisualchat.jpg)
+- 文生图的能力
+   - 让Visual ChatGPT给我画一只猫。
+   ![gpt画猫](image/Xgvisualchat.jpg)
+   - 让Visual ChatGPT给我画一个我们Lab的Logo
+   ![实验室Logo](image/Xgvisualchat3.jpg)
+   - 让Visual ChatGPT帮我生成一个亚洲女人的形象，呃怎么说呢，其实不算崩坏，只是不符合现在的审美，感觉有点像十年前的照片？
+   ![gpt画女生](image/Xgvisualchat4.jpg)
+
+- 图生文的能力
+   - 让Visual ChatGPT判断图像里有什么？（感谢吴同学假期出游提供的素材哈哈哈）
+   ![visual看图](image/Xgvisualchat2.jpg)
+   - 让Visual ChatGPT判断疾病，这张图是湿疹的图片，GPT回答的大差不差。
+   ![visual看湿疹](image/Xgvisualchat5.jpg)
+   - 让Visual ChatGPT判断X光片，图里的病人的X光片骨折了。GPT完美回答。
+   ![visual看骨折](image/Xgvisualchat6.jpg)
 
 
 目前关于ChatGPT我大概做到的就是这些，后面会继续研究补充一些东西。ps：最近沙特的MiniChatGPT4非常的火，但是我的师兄说效果不行我没有配置，还有一个AutoGPT，那个也是个神一般的模型在我看来，你给一个任务，然后他会有两个GPT打架来互相纠错帮你完成这个任务，这真的很神奇，颇有一种找人给你打工的感觉，但是听说要收费，而且我也看到一些博客里面写到AutoGPT难以收敛（找不到最终的解决办法），我本人电脑算力也不足所以还没尝试，这里记录一下等以后AutoGPT版本稳定了可以做尝试。
