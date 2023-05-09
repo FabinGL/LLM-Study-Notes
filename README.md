@@ -146,7 +146,7 @@ ChatGLM的布置流程如下：
 - `conda activate {your_env_name}`启动虚拟环境
 - `python web_demo.py` or `python cli_demo.py`
 
-ChatGLM-6b INT8版本和INT4版本的效果差别感觉不是很大，我感觉INT8版本会更带有人类的感情一些。
+ChatGLM-6b INT8版本和INT4版本的效果差别感觉不是很大，我感觉INT8版本会更带有人类的感情一些。能做到的事情也非常多，还能够给剧本杀剧本评分以及创建剧本杀剧本。还是很厉害的。
 
 这是INT8量化的ChatGLM-6b：
 
