@@ -234,3 +234,9 @@ MOSS的配置显存要求：
 
 项目实现原理如下图所示，过程包括加载文件 -> 读取文本 -> 文本分割 -> 文本向量化 -> 问句向量化 -> 在文本向量中匹配出与问句向量最相似的`top k`个 -> 匹配出的文本作为上下文和问题一起添加到`prompt`中 -> 提交给`LLM`生成回答。
 
+![Langchain-ChatGLM实现原理](image/langchain+chatglm.png)
+
+从文档角度解释就是:
+
+![Langchain-ChatGLMs文档实现](image/langchain+chatglm2.png)
+
