@@ -92,7 +92,7 @@ Visual ChatGPT配置的话就是分为以下几步:
    - 让Visual ChatGPT给我画一个我们Lab的Logo
    ![实验室Logo](image/Xgvisualchat3.jpg)
    - 让Visual ChatGPT帮我生成一个亚洲女人的形象，呃怎么说呢，其实不算崩坏，只是不符合现在的审美，感觉有点像十年前的照片？
-   ![gpt画女生](image/Xgvisualchat4.jpg)
+   ![gpt画女生](image/xgvisualchat4.jpg)
 
 - 图生文的能力
    - 让Visual ChatGPT判断图像里有什么？（感谢吴同学假期出游提供的素材哈哈哈）
