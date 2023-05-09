@@ -212,3 +212,10 @@ MOSS的配置显存要求：
 - 重复输出，回答问题会重复回答，比如说问他你是谁，他会说他是清华的聊天机器人ChatGLM-6bbbbbbbbbbbbbbbb.....
 
 总的来说，微调就像一个小孩训练偏科，要我评价的话，做个不恰当的比喻：GPT4说高考能考到660，那么GLM就可以达到550，但是此时是数学110，英语110，微调以后总分仍然是550，但是数学130，英语90这种感觉。
+
+### Visual-ChatGLM
+既然有Visual ChatGPT，那么有没有Visual ChatGLM呢，我查了一下，发现还真有类似的模型，这其实就是Visual ChatGPT的“盗版”。他能实现文生图的功能。我折腾了很久，发现B站大佬已经做了整合包，[链接在这](https://www.bilibili.com/video/BV1Wa4y1V77o/?spm_id_from=333.999.0.0&vd_source=628628960a416b6de42d5c7fdc17a7fc)。然后这个模型是由三个部分构成的:
+- ChatGLM
+- StableDiffusion
+- 爬虫程序（这里的爬虫程序是UP主自己做的，可以让ChatGLM去阅读网上的信息(CSDN,知乎，B站评论等等)后再回答我们）
+在使用这个整合包之前需要先安装B站另一个AI绘画领域的大佬所作的整合包，[链接在这](https://www.bilibili.com/video/BV1iM4y1y7oA/?spm_id_from=333.999.0.0&vd_source=628628960a416b6de42d5c7fdc17a7fc)，下载之后照着配置就好。只要改个端口号就可以使用了，**需要说明的是绘画最少需要4G显存，所以按照我的显卡就是8+4(分给ChatGLM-8G进行交流，分给Stable Diffusion-4G绘画)**，大家可以根据自己要求来调整这个显存分配。接下来只要按照上面B站UP主的视频一步步配置就好了，非常简单，我就不多说了，直接看看效果吧。
