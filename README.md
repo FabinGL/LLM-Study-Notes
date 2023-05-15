@@ -276,7 +276,7 @@ ps：我在某个群里看到别人拿他来练车辆工程的专业知识，专
 ![Lora4](image/Lora3.jpg)
 
 ---
-
+## Wenda
 最近比较忙，最近就没怎么实现是什么模型。不过我最近又发现一个基于ChatGLM实现的ChatGLM集成模型叫做[闻达](https://github.com/l15y/wenda)。他同样使用了[LangChain](https://docs.langchain.com/docs/)的机制。实现方式很简单，大佬的Github讲的非常清楚，并且也有懒人包，这里我就不再演示怎么安装，只要跟着安装就好。这里我就展示一下效果并对比一下各个平台的效果吧。
 
 - Wenda知识库效果
