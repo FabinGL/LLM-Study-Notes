@@ -282,6 +282,6 @@ ps：我在某个群里看到别人拿他来练车辆工程的专业知识，专
 - Wenda知识库效果
 
 未来便于比较，我同样将wenda上传了本地我学校的知识库，所用的知识库是和传入Langchain-chatglm一样的知识库，可以看到他的理解能力其实没有Langchain-chatglm好，要稍微逊色一些。不过比较有趣的是目前wenda实现了接入网络以及知识库注意力增强等方法，接入网络wenda就可以在网上搜寻问题的答案并进行总结；而知识库的注意力增强可以让GLM自问自答从而得到问题的答案。
-！[wenda1](image/wenda2.png)![wenda2](image/wenda3.jpg)
+![wenda1](image/wenda2.png)![wenda2](image/wenda3.jpg)
 
 Author:林发冰 | Wechat:13205034032 
