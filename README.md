@@ -275,13 +275,18 @@ ps：我在某个群里看到别人拿他来练车辆工程的专业知识，专
 - ControlNet涂色，他能实现很多内容，我这里只展示其中一种。实际上左边的线稿图也是扩散生成模型生成的。
 ![Lora4](image/Lora3.jpg)
 
-2023.05.15更新
+---
 
 最近比较忙，最近就没怎么实现是什么模型。不过我最近又发现一个基于ChatGLM实现的ChatGLM集成模型叫做[闻达](https://github.com/l15y/wenda)。他同样使用了[LangChain](https://docs.langchain.com/docs/)的机制。实现方式很简单，大佬的Github讲的非常清楚，并且也有懒人包，这里我就不再演示怎么安装，只要跟着安装就好。这里我就展示一下效果并对比一下各个平台的效果吧。
 
 - Wenda知识库效果
 
-未来便于比较，我同样将wenda上传了本地我学校的知识库，所用的知识库是和传入Langchain-chatglm一样的知识库，可以看到他的理解能力其实没有Langchain-chatglm好，要稍微逊色一些。不过比较有趣的是目前wenda实现了接入网络以及知识库注意力增强等方法，接入网络wenda就可以在网上搜寻问题的答案并进行总结；而知识库的注意力增强可以让GLM自问自答从而得到问题的答案。
+未来便于比较，我同样将wenda上传了学校的知识库，所用的知识库是和传入Langchain-chatglm一样的知识库，可以看到他的理解能力其实没有Langchain-chatglm好，要稍微逊色一些。不过比较有趣的是目前wenda实现了接入网络以及知识库注意力增强等方法，接入网络wenda就可以在网上搜寻问题的答案并进行总结；而知识库的注意力增强可以让GLM自问自答从而得到问题的答案。
 ![wenda1](image/wenda2.png)![wenda2](image/wenda3.jpg)
 
-Author:林发冰 | Wechat:13205034032 
+- wenda与SD的生成
+
+wenda也同样支持生成提示词传入扩散生成模型做到文生图的效果。并且目前看来wenda所得到的提示词会比上面集成包所做的要好，但是偶尔还会有一些识别不准确情况。**作者提供的安装包里面默认的是ChatGLM-INT4量化的版本，我替换成了ChatGLM-INT8量化。大概占用10G显存左右。我这里将端口号修改为768并且使用CPU运行跑图（GPU剩余显存不支持生成图片了）在wenda中就可以实现文生图了。**
+![wenda3](image/wenda1.png)![wenda4](image/wenda4.jpg)
+
+Author:林发冰 | Wechat:13205034032 | Date:2023.05.15
